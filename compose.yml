@@ -1,0 +1,30 @@
+services:
+  planetmint-1:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./node-1:/home/ubuntu/.planetmint-go:rw
+    networks:
+      - rddl
+
+  planetmint-2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./node-2:/home/ubuntu/.planetmint-go:rw
+    networks:
+      - rddl
+  
+  planetmint-3:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./node-3:/home/ubuntu/.planetmint-go:rw
+    networks:
+      - rddl
+
+networks:
+  rddl: {}
