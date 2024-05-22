@@ -20,6 +20,9 @@ pitch auto host wish vague trigger yellow breeze master wife pass rich throw rid
 
 # Planetmint-3
 modify accuse debris regular combine leopard chase tray mixture margin improve couch border genius spy seat gap toward same poem citizen pride antenna dumb
+
+# Planetmint-4
+debate tattoo rug come portion silk envelope brave bunker wine year slush tornado reward word capable lunch all weird north panel chat bulk turn
 ```
 
 # Reset
