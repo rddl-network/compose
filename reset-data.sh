@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 # reset data dir
 rm -rf node-1/data
