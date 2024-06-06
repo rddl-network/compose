@@ -9,5 +9,5 @@ do
     random_value=$(openssl rand -base64 10 | tr -d /=+ | cut -c 1-10)
 
     # Run the command with the random string
-    planetmint-god tx asset notarize-asset "$random_value" --from plmnt10mq5nj8jhh27z7ejnz2ql3nh0qhzjnfvy50877 --fees 1plmnt -y --keyring-backend test --offline -s $i -a 10
+    planetmint-god tx asset notarize-asset "$random_value" --from machine --fees 1plmnt -y --keyring-backend test --offline -s $i -a 10
 done
