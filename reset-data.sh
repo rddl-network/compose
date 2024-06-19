@@ -5,6 +5,9 @@ rm -rf node-1/data
 rm -rf node-2/data
 rm -rf node-3/data
 rm -rf node-4/data
+# remove machine key from keyring
+rm -rf node-1/keyring-test/7ec149c8f2bdd5e17b3298940fc677782e294d2c.address
+rm -rf node-1/keyring-test/machine.info
 
 mkdir node-1/data
 mkdir node-2/data
