@@ -1,0 +1,19 @@
+{
+ "messages": [
+  {
+   "@type": "/cosmos.upgrade.v1beta1.MsgSoftwareUpgrade",
+   "authority": "plmnt10d07y265gmmuvt4z0w9aw880jnsr700j346q9d",
+   "plan": {
+    "name": "v0.10.0",
+    "time": "0001-01-01T00:00:00Z",
+    "height": "50",
+    "info": "",
+    "upgraded_client_state": null
+   }
+  }
+ ],
+ "metadata": "ipfs://CID",
+ "deposit": "",
+ "title": "to v0.10.0",
+ "summary": "run asset store migration"
+}

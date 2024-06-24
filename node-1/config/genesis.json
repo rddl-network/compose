@@ -81,11 +81,11 @@
           "coins": [
             {
               "denom": "plmnt",
-              "amount": "10000"
+              "amount": "100000"
             },
             {
               "denom": "stake",
-              "amount": "6006000"
+              "amount": "60060000"
             }
           ]
         },
@@ -94,11 +94,11 @@
           "coins": [
             {
               "denom": "plmnt",
-              "amount": "10000"
+              "amount": "100000"
             },
             {
               "denom": "stake",
-              "amount": "6006000"
+              "amount": "60060000"
             }
           ]
         },
@@ -107,11 +107,11 @@
           "coins": [
             {
               "denom": "plmnt",
-              "amount": "10000"
+              "amount": "100000"
             },
             {
               "denom": "stake",
-              "amount": "6006000"
+              "amount": "60060000"
             }
           ]
         },
@@ -120,11 +120,11 @@
           "coins": [
             {
               "denom": "plmnt",
-              "amount": "10000"
+              "amount": "100000"
             },
             {
               "denom": "stake",
-              "amount": "6006000"
+              "amount": "60060000"
             }
           ]
         }
@@ -453,11 +453,11 @@
         "min_deposit": [
           {
             "denom": "stake",
-            "amount": "10000000"
+            "amount": "1"
           }
         ],
-        "max_deposit_period": "172800s",
-        "voting_period": "172800s",
+        "max_deposit_period": "30s",
+        "voting_period": "30s",
         "quorum": "0.334000000000000000",
         "threshold": "0.500000000000000000",
         "veto_threshold": "0.334000000000000000",
