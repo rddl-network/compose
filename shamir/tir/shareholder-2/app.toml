@@ -1,0 +1,6 @@
+certs-path = './certs/'
+db-path = './data'
+key-phrase = 'keyphrase'
+service-host = 'localhost'
+service-port = 8080
+log-level = 'debug'

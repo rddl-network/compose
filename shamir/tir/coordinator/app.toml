@@ -1,0 +1,16 @@
+asset-id = '7add40beb27df701e02ee85089c5bc0021bc813823fedb5f1dcb5debda7f3da9'
+certs-path = './certs/'
+log-level = 'debug'
+rpc-enc-timeout = 20
+rpc-host = 'localhost'
+rpc-password = 'rpc-pass'
+rpc-port = 18884
+rpc-scheme = 'http'
+rpc-user = 'user'
+rpc-wallet-name = 'tir'
+service-bind = 'localhost'
+service-port = 8081
+shamir-shares = 3
+shamir-threshold = 2
+share-holder-list = 'tir-shamir-shareholder-1:8080,tir-shamir-shareholder-2:8080,tir-shamir-shareholder-3:8080'
+test-mode = true
