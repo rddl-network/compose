@@ -2,7 +2,7 @@ services:
   planetmint-1:
     build: 
       context: .
-      dockerfile: Dockerfile
+      dockerfile: dockerfiles/Planetmint.Dockerfile
     volumes:
       - ./node-1:/home/ubuntu/.planetmint-go:rw
     networks:
@@ -12,7 +12,7 @@ services:
   planetmint-2:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: dockerfiles/Planetmint.Dockerfile
     volumes:
       - ./node-2:/home/ubuntu/.planetmint-go:rw
     networks:
@@ -22,7 +22,7 @@ services:
   planetmint-3:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: dockerfiles/Planetmint.Dockerfile
     volumes:
       - ./node-3:/home/ubuntu/.planetmint-go:rw
     networks:
@@ -32,12 +32,85 @@ services:
   planetmint-4:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: dockerfiles/Planetmint.Dockerfile
     volumes:
       - ./node-4:/home/ubuntu/.planetmint-go:rw
     networks:
       - rddl
     command: planetmint-god start
 
+  tir-shamir-coordinator:
+    build: 
+      context: .
+      dockerfile: dockerfiles/ShamirCoordinator.Dockerfile
+    volumes:
+      - ./shamir/tir/coordinator:/home/ubuntu
+      - ./certs:/home/ubuntu/certs
+    networks:
+      - rddl
+      - shamir-tir
+    command: shamir-coordinator-service
+
+  tir-shamir-shareholder-1:
+    build:
+      context: .
+      dockerfile: dockerfiles/ShamirShareholder.Dockerfile
+    volumes:
+      - ./shamir/tir/shareholder-1:/home/ubuntu/
+      - ./certs:/home/ubuntu/certs
+    networks:
+      - shamir-tir
+    command: shamir-shareholder-service
+
+  tir-shamir-shareholder-2:
+    build:
+      context: .
+      dockerfile: dockerfiles/ShamirShareholder.Dockerfile
+    volumes:
+      - ./shamir/tir/shareholder-2:/home/ubuntu/
+      - ./certs:/home/ubuntu/certs
+    networks:
+      - shamir-tir
+    command: shamir-shareholder-service
+
+  tir-shamir-shareholder-3:
+    build:
+      context: .
+      dockerfile: dockerfiles/ShamirShareholder.Dockerfile
+    volumes:
+      - ./shamir/tir/shareholder-3:/home/ubuntu/
+      - ./certs:/home/ubuntu/certs
+    networks:
+      - shamir-tir
+    command: shamir-shareholder-service
+
+  elementsd-1:
+    image: blockstream/elementsd:latest
+    ports:
+      - "18884:18884"
+      - "18886:18886"
+    volumes:
+      - ./elements/node1:/root/.elements
+    command: elementsd -printtoconsole
+
+  elementsd-2:
+    image: blockstream/elementsd:latest
+    ports:
+      - "18885:18885"
+      - "18887:18887"
+    volumes:
+      - ./elements/node2:/root/.elements
+    command: elementsd -printtoconsole
+
+  bitcoind:
+    image: blockstream/bitcoind:latest
+    ports:
+      - "18888:18888"
+      - "18889:18889"
+    volumes:
+      - ./elements/btc:/root/.bitcoin
+    command: bitcoind -printtoconsole
+
 networks:
   rddl: {}
+  shamir-tir: {}
